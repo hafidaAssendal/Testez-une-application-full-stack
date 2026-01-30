@@ -23,6 +23,6 @@ export class AppComponent {
 
   public logout(): void {
     this.sessionService.logOut();
-    this.router.navigate([''])
+    this.router.navigate(['/login'])
   }
 }

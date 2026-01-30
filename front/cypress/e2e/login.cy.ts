@@ -33,7 +33,6 @@ describe('Login spec', () => {
 describe('Login error - wrong credentials', () => {
         it('Should show error if login or password is wrong', () => {
 
-
           cy.intercept('POST', '/api/auth/login', {
             statusCode: 401,
             body: {
@@ -48,15 +47,11 @@ describe('Login error - wrong credentials', () => {
 
           cy.wait('@loginFail')
 
-
           cy.url().should('include', '/login')
-
 
           cy.contains('An error occurred').should('be.visible')
         });
-      });
-
-    describe('Form validation - required fields', () => {
+    
       it('should display error when email is missing', () => {
         cy.get('input[formControlName="password"]').type('password123');
 
@@ -90,4 +85,4 @@ describe('Login error - wrong credentials', () => {
         cy.get('mat-form-field.mat-form-field-invalid').should('have.length', 2);
       });
     });
-  });
+      });
