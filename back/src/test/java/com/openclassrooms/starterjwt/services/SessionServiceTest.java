@@ -60,9 +60,7 @@ class SessionServiceTest {
   @Test
   void shouldCreateSession() {
     when(sessionRepository.save(session)).thenReturn(session);
-
     Session result = sessionService.create(session);
-
     assertNotNull(result);
     verify(sessionRepository).save(session);
   }
@@ -71,9 +69,7 @@ class SessionServiceTest {
   @Test
   void shouldReturnAllSessions() {
     when(sessionRepository.findAll()).thenReturn(List.of(session));
-
     List<Session> result = sessionService.findAll();
-
     assertEquals(1, result.size());
   }
 
