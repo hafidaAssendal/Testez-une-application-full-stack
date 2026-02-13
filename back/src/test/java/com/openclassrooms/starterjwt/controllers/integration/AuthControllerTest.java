@@ -21,10 +21,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-  /**
-   * Tests d'intégration pour AuthController
-   * Teste les endpoints /api/auth/login et /api/auth/register
-   */
   @SpringBootTest
   @AutoConfigureMockMvc
   public class AuthControllerTest {
@@ -46,7 +42,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
     @BeforeEach
     public void setUp() {
-      // Nettoyer la base de données avant chaque test
+
       userRepository.deleteAll();
 
       // Créer un utilisateur de test
