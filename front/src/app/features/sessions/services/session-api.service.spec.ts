@@ -249,7 +249,7 @@ describe('SessionApiService', () => {
     it('should return void on successful participation', (done) => {
       service.participate('1', '10').subscribe({
         next: (response) => {
-          expect(response).toBeUndefined();
+          expect(response).toBeNull();
           done();
         }
       });
@@ -284,7 +284,7 @@ describe('SessionApiService', () => {
     it('should return void on successful unparticipation', (done) => {
       service.unParticipate('1', '10').subscribe({
         next: (response) => {
-          expect(response).toBeUndefined();
+         expect(response).toBeNull();
           done();
         }
       });

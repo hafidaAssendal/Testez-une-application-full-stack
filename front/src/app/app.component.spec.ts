@@ -6,6 +6,7 @@ import { of } from 'rxjs';
 import { AppComponent } from './app.component';
 import { AuthService } from './features/auth/services/auth.service';
 import { SessionService } from './services/session.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -15,7 +16,9 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule,
+        RouterTestingModule
+      ],
       declarations: [AppComponent],
       providers: [
         SessionService,

@@ -63,7 +63,7 @@ describe('AuthService', () => {
     it('should return void on successful registration', (done) => {
       service.register(mockRegisterRequest).subscribe({
         next: (response) => {
-          expect(response).toBeUndefined();
+           expect(response).toBeNull();
           done();
         }
       });
