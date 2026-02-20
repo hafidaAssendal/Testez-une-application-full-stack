@@ -5,7 +5,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UnauthGuard } from './guards/unauth.guard';
 
-const routes: Routes = [
+export const  routes: Routes = [
   {
     path: '',
     canActivate: [UnauthGuard],
