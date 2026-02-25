@@ -138,7 +138,9 @@
             <exclude>**/models/**</exclude>
             <exclude>**/mapper/**</exclude>
             <exclude>**/payload/**</exclude>
+            <exclude>**/exception/**</exclude>
             <exclude>**/repository/**</exclude>
+            <exclude>**/*Application.class</exclude>
           </excludes>
         </configuration>
         <executions>
